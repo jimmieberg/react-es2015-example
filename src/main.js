@@ -1,5 +1,5 @@
 'use strict';
 
-var Index = require('views/Index.jsx');
+import Index from 'views/Index.jsx';
 
 Index.init('content');

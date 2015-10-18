@@ -17,4 +17,4 @@ var Index = {
 	}
 };
 
-module.exports = Index;
+export default Index;

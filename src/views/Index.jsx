@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 // Components
 import Button from 'components/Button.jsx';
 
-var Index = {
+const Index = {
 	init: function(elementId) {
 		ReactDOM.render(
 			<div>

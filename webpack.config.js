@@ -1,9 +1,16 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-	entry: './src/main.js',
+  	devtool: 'eval',
+	entry: [
+		'webpack-dev-server/client?http://localhost:3000',
+  		'webpack/hot/only-dev-server',
+		'./src/main.js',
+	],
 	output: {
-		filename: './build/bundle.js'
+		path: path.join(__dirname, 'build'),
+    	filename: 'bundle.js',
 	},
 	resolve: {
         root: [path.join(__dirname, 'src')]
@@ -13,20 +20,17 @@ module.exports = {
 			{
 				test: /\.jsx$/,
   				exclude: /node_modules/,
-  				loader: "babel-loader",
-				query: {
-					presets: ['react', 'es2015']
-				}
+  				loaders: ["react-hot", "babel-loader?presets[]=react,presets[]=es2015"]
 			},
 			{
 				test: /\.js$/,
   				exclude: /node_modules/,
-  				loader: "babel-loader",
-				query: {
-					presets: ['es2015']
-				}
+  				loaders: ["react-hot", "babel-loader?presets[]=es2015"]
 			}
 		],
-	}
+	},
+	plugins: [
+		new webpack.HotModuleReplacementPlugin()
+	]
 };
 

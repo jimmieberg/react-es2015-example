@@ -13,7 +13,7 @@ export default class Counter extends React.Component {
 		return (
 			<div>
 				<button onClick={ this.props.onIncrementClick.bind(this) }>
-					Click me! 
+					Increment 
 				</button>
 			</div>
 		);

@@ -11,8 +11,8 @@ To build:
 To develop:
 
 ```
-> npm install webpack-dev-server -g
-> webpack-dev-server
+> npm install
+> npm start
 ```
 
-Connect to localhost:8080
+Connect to localhost:3000

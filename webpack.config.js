@@ -9,8 +9,9 @@ module.exports = {
 		'./src/main.js',
 	],
 	output: {
-		path: path.join(__dirname, 'build'),
+		path: path.join(__dirname, 'static'),
     	filename: 'bundle.js',
+	    publicPath: '/static/'
 	},
 	resolve: {
         root: [path.join(__dirname, 'src')]

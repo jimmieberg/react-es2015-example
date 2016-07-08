@@ -17,6 +17,7 @@ export default class CountDashboard extends React.Component {
 				<div>
 					Count: { this.props.count }<br />
 				</div>
+				<hr />
 				<div>
 					<Button { ...this.props } />
 				</div>

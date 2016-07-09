@@ -5,6 +5,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { connect } from 'react-redux'
+// Bundle styles
+require('materialize-css/dist/css/materialize.min.css');
 // Components
 import CountDashboard from 'components/CountDashboard.jsx';
 

@@ -11,11 +11,11 @@ export default class Counter extends React.Component {
 	
 	render() {
 		return (
-			<div>
-				<button onClick={ this.props.onIncrementClick.bind(this) }>
+			<a
+				className="waves-effect waves-light btn btn-large blue accent-1" 
+				onClick={ this.props.onIncrementClick.bind(this) }>
 					Increment 
-				</button>
-			</div>
+			</a>
 		);
 	}
 };

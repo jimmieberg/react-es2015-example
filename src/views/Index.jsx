@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { connect } from 'react-redux'
 // Bundle styles
 require('materialize-css/dist/css/materialize.min.css');
+require('materialize-css');
 // Components
 import CountDashboard from 'components/CountDashboard.jsx';
 
@@ -38,7 +39,10 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		onIncrementClick: () => {
 			dispatch({ type: 'INCREMENT' })
-		}
+		},
+		onDecrementClick: () => {
+			dispatch({ type: 'DECREMENT' })
+		},
 	}
 }
 

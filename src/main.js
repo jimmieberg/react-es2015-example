@@ -10,7 +10,7 @@ function counter(state = { count: 0 }, action) {
 			state.count = state.count + 1;
 			return Object.assign({}, state);
 		case 'DECREMENT':
-			state.count = state.count + 1;
+			state.count = state.count > 0 ? state.count - 1 : state.count;
 			return Object.assign({}, state);
 		default:
 			return state;

@@ -25,14 +25,15 @@ const Index = {
 	}
 };
 
-const getCountStats = (count) => {
+const getCountStats = (state) => {
 	return { 
-		count: count
+		count: state.count,
+		clicks: state.clicks
 	};
 }
 
 const mapStateToProps = (state) => {
-	return getCountStats(state.count);
+	return getCountStats(state);
 }
 
 const mapDispatchToProps = (dispatch) => {

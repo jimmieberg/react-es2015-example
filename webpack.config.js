@@ -35,11 +35,18 @@ module.exports = {
 			{ 
 				test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
 				loader: 'url-loader?limit=100000' 
-			}
+			},
 		],
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.ProvidePlugin({
+			$: "materialize-css/node_modules/jquery",
+			jQuery: "materialize-css/node_modules/jquery",
+			"window.jQuery": "materialize-css/node_modules/jquery",
+			"root.jQuery": "materialize-css/node_modules/jquery",
+			Hammer: "hammerjs/hammer"
+		})
 	]
 };
 

@@ -18,7 +18,7 @@ export default class Counter extends React.Component {
 
 		return (
 			<a className={ className } onClick={ this.props.onDecrementClick.bind(this) }>
-				Increment
+				<i className="tiny material-icons">remove</i>
 			</a>
 		);
 	}

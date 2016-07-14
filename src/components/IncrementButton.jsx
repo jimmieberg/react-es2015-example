@@ -14,7 +14,7 @@ export default class Counter extends React.Component {
 			<a
 				className="waves-effect waves-light btn btn-large blue accent-1" 
 				onClick={ this.props.onIncrementClick.bind(this) }>
-					Increment 
+					<i className="material-icons">add</i>
 			</a>
 		);
 	}

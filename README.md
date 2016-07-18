@@ -1,5 +1,5 @@
 # react-es2015-example
-React, ES2015, Babel, Webpack, Redux.
+React, ES2015, Babel, Webpack, Redux, Materialize.
 
 To build:
 
